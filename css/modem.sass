@@ -24,7 +24,7 @@ body
   z-index: 1
   cursor: pointer
   display: absolute
-  width: 100%
+  width: calc(100% - 30px)
   box-shadow: 0 0 0 4px rgb(255, 128, 128)
   padding: 15px 0
   margin-bottom: 40px
@@ -60,7 +60,8 @@ body
   display: none
 
 h2
-  max-width: 440px
+  max-width: 410px
+  width: calc(100vw - 100px)
   font-family: 'Source Sans Pro'
   font-weight: 400
   font-size: 10pt
@@ -99,10 +100,13 @@ h2
   padding-bottom: 100px
 
 .podcasts-col
-  max-width: 600px
+  max-width: 630px
+  display: flex
+  align-items: center
+  flex-direction: column
   
 .episode
-  width: 100%
+  width: calc(100% - 30px)
   margin-bottom: 40px
   display: flex
   box-shadow: 0 0 0 0px rgba(119, 119, 119, 0)
@@ -119,7 +123,7 @@ h2
     padding: 40px 40px
   &:nth-child(2) .episode-meta
     margin: 2px 0
-  &:nth-child(2) .episode-titel
+  &:nth-child(2) .episode-title
     font-size: 20pt
     margin: 10px 0 30px 0
   &:nth-child(2) .episode-image
@@ -128,6 +132,13 @@ h2
     background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/e/3/1/b841-de6b-4061-bd7c-cf0dce8e02b1')
   &:nth-child(4) .episode-image
     background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/1/c/4/9/e331-a633-4215-949a-8068e53eb8d3')
+  &:nth-child(5) .episode-image
+    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/0/9/3/5/ad0f-82f7-4194-a6ab-0b371425c7e0')
+  &:nth-child(6) .episode-image
+    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/3/7/9/f1c0-05b5-4e50-a1ae-caf95c568910')
+
+.episode-active
+  box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
   
 .episode-image-wrapper
   padding: 20px 0px 20px 40px
@@ -152,7 +163,7 @@ h2
   margin: 0 2px 0 0
   letter-spacing: 2px
   
-.episode-titel
+.episode-title
   cursor: pointer
   color: $c1
   font-size: 10pt
@@ -202,3 +213,19 @@ p
   
 iframe
   margin-top: 10px
+
+@media only screen and (max-width: 600px)
+  .logo
+    width: 200px
+    margin-top: 60px
+    margin-bottom: -30px
+
+  .episode:nth-child(2)
+    flex-direction: column
+
+  .episode:nth-child(2) .episode-image-wrapper
+    padding-bottom: 0
+
+  .episode:nth-child(2) .episode-image
+    background-repeat: no-repeat
+    background-size: 100%

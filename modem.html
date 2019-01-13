@@ -1,115 +1,136 @@
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
 
-  <title>Radio Modem redesign</title>
-  <meta name="description" content="A redesign of ITU's Radio Modem">
-  <meta name="author" content="Kristoffer Højelse">
+    <title>Radio Modem redesign</title>
+    <meta name="description" content="A redesign of ITU's Radio Modem">
+    <meta name="author" content="Kristoffer Højelse">
 
-  <link rel="canonical" href="http://hojelse.com">
+    <link rel="canonical" href="http://hojelse.com">
 
-	<link href="css/modem.css" rel="stylesheet" type="text/css">
-  <link href="images/iconBlue.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="css/modem.css" rel="stylesheet" type="text/css">
+    <link href="images/iconBlue.ico" rel="shortcut icon" type="image/x-icon">
 
-  <!-- Open graph object -->
-  <!--
-  <meta property="og:image" content="http://hojelse.com/images/Icon-on-white.png" />
-  <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:width" content="300" />
-  <meta property="og:image:height" content="300" />
-  -->
+    <!-- Open graph object -->
+    <!--
+    <meta property="og:image" content="http://hojelse.com/images/Icon-on-white.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="300" />
+    <meta property="og:image:height" content="300" />
+    -->
 
-  <!-- Twitter cards -->
-  <!--
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@khojelse">
-  <meta name="twitter:creator" content="@khojelse">
-  <meta property="og:site_name" content="hojelse">
-  <meta property="og:url" content="http://hojelse.com">
-  <meta itemprop="name" content="Kristoffer Højelse">
-  <meta itemprop="url" content="http://hojelse.com">
-  <meta itemprop="thumbnailUrl" content="http://hojelse.com/images/Icon-on-white.png">
-  <meta itemprop="image" contente="http://hojelse.com/images/Icon-on-white.png">
-  <link rel="image_src" href="http://hojelse.com/images/Icon-on-white.png">
-  <meta name="twitter:titel" content="shape">
-  <meta name="twitter:image" content="http://hojelse.com/images/Icon-on-white.png">
-  <meta name="twitter:url" content="http://hojelse.com">
-  <meta name="twitter:card" content="summary">
-  -->
+    <!-- Twitter cards -->
+    <!--
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@khojelse">
+    <meta name="twitter:creator" content="@khojelse">
+    <meta property="og:site_name" content="hojelse">
+    <meta property="og:url" content="http://hojelse.com">
+    <meta itemprop="name" content="Kristoffer Højelse">
+    <meta itemprop="url" content="http://hojelse.com">
+    <meta itemprop="thumbnailUrl" content="http://hojelse.com/images/Icon-on-white.png">
+    <meta itemprop="image" contente="http://hojelse.com/images/Icon-on-white.png">
+    <link rel="image_src" href="http://hojelse.com/images/Icon-on-white.png">
+    <meta name="twitter:title" content="shape">
+    <meta name="twitter:image" content="http://hojelse.com/images/Icon-on-white.png">
+    <meta name="twitter:url" content="http://hojelse.com">
+    <meta name="twitter:card" content="summary">
+    -->
 
-  <!-- jQuery Library-->
-	<script src="scripts/jquery-3.2.1.js">
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-  </script>
+    <!-- jQuery Library-->
+    <script src="scripts/jquery-3.2.1.js">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
 
-  <!-- 'Font awesome' Library-->
-  <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
-  
-  <!--Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
+    <!-- 'Font awesome' Library-->
+    <link href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" rel="stylesheet">
 
-</head>
-<body>
-	<div class="body-2">
-    <div class="header">
-      <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-        <style type="text/css">.st0{fill:none;stroke:#777;stroke-width:20;}</style>
-        <g><path class="st0" d="M198.1,286c-0.1,30.8-25.5,55.8-56.9,55.7c-31.4,0-56.8-25.1-56.7-55.9c0-30.8,25.5-55.8,56.9-55.7 C172.7,230.1,198.1,255.2,198.1,286z M428.9,332.3l-108-0.2l0.2-102l108,0.2L428.9,332.3z M141.3,230.1V62H375V229"/></g>
-      </svg>
-      <h2>Modem is a student driven organisation that hosts radio, makes podcasts, and covers live events in and around the IT-University of Copenhagen.</h2>
-      <div class="social">
-        <div class="social-icons"><i class="fab fa-instagram"></i></div>
-        <div class="social-icons"><i class="fab fa-github-alt"></i></div>
-        <div class="social-icons"><i class="fab fa-facebook-f"></i></div>
-        <div class="social-icons"><i class="fab fa-twitter"></i></div>
-      </div>
-    </div>
-    <div class="podcasts-main">
-      <div class="podcasts-col">
-        <div class="live" id="live">
-          <div class="live-beacon" id="live-beacon"></div>
-          <div class="live-text" id="live-text">Live right now</div>
-          <div class="live-text offline-text" id="offline-text">Next broadcast 12:30:00 03 Feb 2019</div>
-        </div>
-        <div class="episode">
-          <div class="episode-image-wrapper">
-            <div class="episode-image"></div>
-          </div>
-          <div class="episode-content">
-            <div class="episode-meta">Season 3 - Episode 02</div>
-            <div class="episode-titel">Old Vs. New</div>
-            <p class="episode-description">What is a bachelor? Why is ITU the perfect platform for social interaction? What should a new student avoid?</p>
-            <p class="episode-description">In this first part of four parts we create a forum between a new and an old student of a bachelors course at ITU! This week we have Emil and Casper, both students of Software Development (SWU), in the studio to share a dialogue of expectations and advice that might surprise the newer students.</p>
-            <p class="episode-description">Next week will be DIT so if you're a new student and want to be involved you can contact us at Dann@itu.dk.</p>
-          </div>
-    </div>
-        <div class="episode">
-          <div class="episode-image-wrapper">
-            <div class="episode-image"></div>
-          </div>
-          <div class="episode-content">
-            <div class="episode-meta">Season 3 - Episode 01</div>
-            <div class="episode-titel">Welcome all!</div>
-            <p class="episode-description">Season 3 is here and we use this first episode to welcome all new students and give you a small taste of what is to come in the future!</p>
-          </div>
-    </div>
-        <div class="episode">
-          <div class="episode-image-wrapper">
-            <div class="episode-image"></div>
-          </div>
-          <div class="episode-content">
-            <div class="episode-meta">Season 2 - Episode 10</div>
-            <div class="episode-titel">Booger Bolognese...!</div>
-            <p class="episode-description">Its the end of the second season of DNA and so we lift the veil on one of the biggest secrets of DNA history!</p>
-          </div>
+    <!--Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="body-2">
+      <div class="header">
+        <svg class="logo" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <style type="text/css">.st0{fill:none;stroke:#777;stroke-width:20;}</style>
+          <g><path class="st0" d="M198.1,286c-0.1,30.8-25.5,55.8-56.9,55.7c-31.4,0-56.8-25.1-56.7-55.9c0-30.8,25.5-55.8,56.9-55.7 C172.7,230.1,198.1,255.2,198.1,286z M428.9,332.3l-108-0.2l0.2-102l108,0.2L428.9,332.3z M141.3,230.1V62H375V229"/></g>
+        </svg>
+        <h2>Modem is a student driven organisation that hosts radio, makes podcasts, and covers live events in and around the IT-University of Copenhagen.</h2>
+        <div class="social">
+          <div class="social-icons"><i class="fab fa-instagram"></i></div>
+          <div class="social-icons"><i class="fab fa-github-alt"></i></div>
+          <div class="social-icons"><i class="fab fa-facebook-f"></i></div>
+          <div class="social-icons"><i class="fab fa-twitter"></i></div>
         </div>
       </div>
+      <div class="podcasts-main">
+        <div class="podcasts-col">
+          <div class="live" id="live">
+            <div class="live-beacon" id="live-beacon"></div>
+            <div class="live-text" id="live-text">Live right now</div>
+            <div class="live-text offline-text" id="offline-text">Next broadcast 12:30:00 03 Feb 2019</div>
+          </div>
+          <div id="episode-uno" class="episode">
+            <div class="episode-image-wrapper">
+              <div class="episode-image"></div>
+            </div>
+            <div class="episode-content">
+              <div class="episode-meta">Season 3 - Episode 02</div>
+              <div id="uno" class="episode-title">Old Vs. New (SWU)</div>
+              <p class="episode-description">What is a bachelor? Why is ITU the perfect platform for social interaction? What should a new student avoid?</p>
+              <p class="episode-description">In this first part of four parts we create a forum between a new and an old student of a bachelors course at ITU! This week we have Emil and Casper, both students of Software Development (SWU), in the studio to share a dialogue of expectations and advice that might surprise the newer students.</p>
+              <p class="episode-description">Next week will be DIT so if you're a new student and want to be involved you can contact us at Dann@itu.dk.</p>
+            </div>
+          </div>
+          <div id="episode-dos" class="episode">
+            <div class="episode-image-wrapper">
+              <div class="episode-image"></div>
+            </div>
+            <div class="episode-content">
+              <div class="episode-meta">Season 3 - Episode 01</div>
+              <div id="dos" class="episode-title">Welcome all!</div>
+              <p class="episode-description">Season 3 is here and we use this first episode to welcome all new students and give you a small taste of what is to come in the future!</p>
+            </div>
+          </div>
+          <div id="episode-tres" class="episode">
+            <div class="episode-image-wrapper">
+              <div class="episode-image"></div>
+            </div>
+            <div class="episode-content">
+              <div class="episode-meta">Season 2 - Episode 10</div>
+              <div id="tres" class="episode-title">Booger Bolognese...! (SEASON FINALE)</div>
+              <p class="episode-description">Its the end of the second season of DNA and so we lift the veil on one of the biggest secrets of DNA history!</p>
+            </div>
+          </div>
+          <div id="episode-cuatro" class="episode">
+            <div class="episode-image-wrapper">
+              <div class="episode-image"></div>
+            </div>
+            <div class="episode-content">
+              <div class="episode-meta">Season 2 - Episode 09</div>
+              <div id="cuatro" class="episode-title">The Hackening!</div>
+              <p class="episode-description">DNA was blessed, and a bit affraid, with the presence of their guest Veronika aka. The IT-hacker. We talk Roskilde line-up and mock Asgar...</p>
+            </div>
+          </div>
+          <div id="episode-cinco" class="episode">
+            <div class="episode-image-wrapper">
+              <div class="episode-image"></div>
+            </div>
+            <div class="episode-content">
+              <div class="episode-meta">Season 2 - Episode 08</div>
+              <div id="cinco" class="episode-title">No u</div>
+              <p class="episode-description">Hello!
+                  Today the boys of DNA reverse everything and therefore Asgar will take on the technician role and Daniel does F!"#k all on the...</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <script src="scripts/modem.js"></script>
-</body>
+    <script src="scripts/modem.js"></script>
+  </body>
 </html>
