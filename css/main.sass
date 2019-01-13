@@ -1,0 +1,202 @@
+$c1: #777
+
+body
+  position: relative
+  margin: 0
+  font-family: 'Source Code Pro'
+  background-color: #eee
+  
+.body-1
+  position: absolute
+  min-height: 100vh
+  width: 100%
+  padding-bottom: 500px
+  
+.body-2
+  position: absolute
+  width: 100%
+  
+.logo
+  width: 280px
+  margin-top: 100px
+  margin-bottom: -30px
+  
+.live
+  z-index: 1
+  cursor: pointer
+  display: absolute
+  width: 600px
+  border: solid 4px rgb(255, 128, 128)
+  padding: 15px 0
+  margin-bottom: 40px
+  display: flex
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  //display: none
+  
+.live-text
+  display: inline-block
+  color: rgb(255, 100, 100)
+  font-weight: 600
+  font-size: 12pt
+  text-transform: uppercase
+  
+.live-beacon
+  display: inline-block
+  width: 12px
+  height: 12px
+  margin-right: 15px
+  background: rgb(255, 128, 128)
+  border-radius: 50%
+  animation: pulse 4s ease-in-out infinite
+  
+@keyframes pulse
+  0%, 60%
+    box-shadow: 0px 0px 0px 0px rgba(255, 128, 128, 0.3)
+  100%
+    box-shadow: 0px 0px 0px 360px rgba(255, 128, 128, 0)
+  
+.pulse-offline
+  display: none
+  
+.header
+  display: flex
+  align-items: center
+  flex-direction: column
+
+h2
+  width: 440px
+  font-family: 'Source Sans Pro'
+  font-weight: 400
+  font-size: 10pt
+  text-align: center
+  color: $c1
+  margin-bottom: 30px
+  
+.social
+  cursor: pointer
+  margin-bottom: 50px
+  display: flex
+  justify-content: center
+  align-items: center
+  
+.social-icons
+  height: 30px
+  width: 30px
+  background-color: $c1
+  border-radius: 30px
+  margin: 0 10px
+  display: flex
+  align-items: center
+  justify-content: center
+  &:hover 
+    background-color: lighten($c1, 15%)
+
+.fab
+  color: #eee
+  
+.podcasts-main
+  width: 100%
+  display: flex
+  align-items: center
+  flex-direction: column
+  padding-top: 30px
+  padding-bottom: 100px
+  
+.episode
+  width: 600px
+  margin-bottom: 40px
+  display: flex
+  border: solid 4px $c1
+  &:nth-child(2) .episode-image-wrapper
+    padding: 40px 0px 40px 40px
+  &:nth-child(2) .episode-image
+    width: 100px
+    height: 100px
+    background-size: 100px 100px
+  &:nth-child(2) .episode-content
+    padding: 40px 40px
+  &:nth-child(2) .episode-meta
+    margin: 2px 0
+  &:nth-child(2) .episode-titel
+    font-size: 20pt
+    margin: 10px 0 30px 0
+  &:nth-child(2) .episode-image
+    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/e/3/1/b841-de6b-4061-bd7c-cf0dce8e02b1')
+  &:nth-child(3) .episode-image
+    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/e/3/1/b841-de6b-4061-bd7c-cf0dce8e02b1')
+  &:nth-child(4) .episode-image
+    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/1/c/4/9/e331-a633-4215-949a-8068e53eb8d3')
+  
+.episode-image-wrapper
+  padding: 20px 0px 20px 40px
+  
+.episode-image
+  background-color: $c1
+  width: 75px
+  height: 75px
+  border-radius: 50%
+  background-repeat: no-repeat
+  background-size: 75px 75px
+  
+.episode-content
+  padding: 20px 40px
+  
+.episode-meta
+  text-transform: uppercase
+  color: $c1
+  font-size: 6pt
+  margin: 0 2px 0 0
+  letter-spacing: 2px
+  
+.episode-titel
+  cursor: pointer
+  color: $c1
+  font-size: 10pt
+  font-weight: 700
+  margin: 6px 0 6px 0
+  &:hover
+    color: lighten($c1, 15%)
+  
+.episode-description
+  font-family: 'Source Sans Pro'
+  color: $c1
+  font-size: 10pt
+  line-height: 1.4
+  margin-top: 0
+
+p
+  margin-bottom: 1em
+  &:last-child
+    margin-bottom: 0
+  
+.footer
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.footer-content
+  margin: 80px 0
+  width: 600px
+  font-family: 'Source Sans Pro'
+  color: #888
+  font-size: 10pt
+  line-height: 1.4
+  font-weight: 300
+  
+.live-offline
+  border: solid 4px $c1
+  
+.live-text-offline
+  display: none
+  
+#offline-text
+  color: $c1
+  
+.offline-text
+  display: none
+  
+iframe
+  margin-top: 10px
