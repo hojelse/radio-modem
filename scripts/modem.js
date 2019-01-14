@@ -25,11 +25,11 @@ $(window).on('resize scroll', function() {
       var activeEpisode = $(this).attr('id');
       if ($(this).isInViewport()) {
         var activeEpisodes = document.getElementsByClassName('episode-active');
-        var noActiveEpisodes = activeEpisodes.length;
-        if (noActiveEpisodes < 2){
+        //var noActiveEpisodes = activeEpisodes.length;
+        //if (noActiveEpisodes < 2){
         $('#episode-' + activeEpisode).addClass('episode-active');
-        console.log('#epsiode-' + activeEpisode);
-        }
+        //console.log('#epsiode-' + activeEpisode);
+        //}
       } else {
         $('#episode-' + activeEpisode).removeClass('episode-active');
       }

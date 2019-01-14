@@ -256,7 +256,9 @@ p
   letter-spacing: 2px
   margin-top: 60px
   padding: 5px 18px
-  box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
+  transition: 0.3s ease-in-out
+  &:hover
+    box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
 
 .footer
   width: 100%
@@ -345,3 +347,6 @@ p
   .episode:nth-child(2) .episode-image
     background-repeat: no-repeat
     background-size: 100%
+
+  .load-more
+    box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
