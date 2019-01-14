@@ -79,6 +79,7 @@ h2
 .social-icons
   height: 30px
   width: 30px
+  text-decoration: none
   background-color: $c1
   border-radius: 30px
   margin: 0 10px
@@ -296,12 +297,54 @@ p
     width: calc(50% - 80px)
 
 .footer-content > .social
-  pointer-events: none
-  margin: 10px 0
-  padding: 0 35px
-  width: calc(100% - 70px)
-  max-width: 300px
+  //pointer-events: none
+  margin: 20px 0
+  padding: 0 28px
+  width: 100%
+  max-width: 600px
   justify-content: space-between
+
+.footer-content > .social > .social-icons
+  //background-color: #fde
+  &::after
+    position: absolute
+    font-size: 8pt
+    margin-top: 0
+    margin-left: 60px
+    background-color: $c1
+    padding: 2px 10px
+    color: white
+    transition: 0.1s ease-in-out
+    transform: none
+    opacity: 1
+  &::before
+    margin-top: 0
+    margin-left: 24px
+    transform: none
+    opacity: 1
+    //triangle
+    width: 0
+    height: 0
+    border-top: 5px solid transparent
+    border-right: 5px dashed $c1
+    border-bottom: 5px solid transparent
+    //box-shadow: 2px 2px 4px 1px #000
+  &:nth-child(1)
+    padding-right: 85px
+  &:nth-child(2)
+    padding-right: 70px
+  &:nth-child(3)
+    padding-right: 80px
+  &:nth-child(4)
+    padding-right: 68px
+  &:nth-child(1)::after
+    margin-left: 60px
+  &:nth-child(2)::after
+    margin-left: 53px
+  &:nth-child(3)::after
+    margin-left: 59px
+  &:nth-child(4)::after
+    margin-left: 53px
   
 .live-offline
   box-shadow: 0 0 0 4px $c1
@@ -350,3 +393,14 @@ p
 
   .load-more
     box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
+
+  .footer-content > .social
+    margin: 10px 0
+
+  .footer-content > .social > .social-icons
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4)
+      padding-right: 0px
+    &::after
+      display: none
+    &::before
+      display: none

@@ -123,6 +123,7 @@ h2 {
 .social-icons {
   height: 30px;
   width: 30px;
+  text-decoration: none;
   background-color: #777;
   border-radius: 30px;
   margin: 0 10px;
@@ -472,14 +473,73 @@ p:last-child {
 }
 
 .footer-content > .social {
-  pointer-events: none;
-  margin: 10px 0;
-  padding: 0 35px;
-  width: calc(100% - 70px);
-  max-width: 300px;
+  margin: 20px 0;
+  padding: 0 28px;
+  width: 100%;
+  max-width: 600px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer-content > .social > .social-icons::after {
+  position: absolute;
+  font-size: 8pt;
+  margin-top: 0;
+  margin-left: 60px;
+  background-color: #777;
+  padding: 2px 10px;
+  color: white;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+}
+
+.footer-content > .social > .social-icons::before {
+  margin-top: 0;
+  margin-left: 24px;
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 5px dashed #777;
+  border-bottom: 5px solid transparent;
+}
+
+.footer-content > .social > .social-icons:nth-child(1) {
+  padding-right: 85px;
+}
+
+.footer-content > .social > .social-icons:nth-child(2) {
+  padding-right: 70px;
+}
+
+.footer-content > .social > .social-icons:nth-child(3) {
+  padding-right: 80px;
+}
+
+.footer-content > .social > .social-icons:nth-child(4) {
+  padding-right: 68px;
+}
+
+.footer-content > .social > .social-icons:nth-child(1)::after {
+  margin-left: 60px;
+}
+
+.footer-content > .social > .social-icons:nth-child(2)::after {
+  margin-left: 53px;
+}
+
+.footer-content > .social > .social-icons:nth-child(3)::after {
+  margin-left: 59px;
+}
+
+.footer-content > .social > .social-icons:nth-child(4)::after {
+  margin-left: 53px;
 }
 
 .live-offline {
@@ -539,6 +599,18 @@ p:last-child {
   .load-more {
     -webkit-box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1);
             box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1);
+  }
+  .footer-content > .social {
+    margin: 10px 0;
+  }
+  .footer-content > .social > .social-icons:nth-child(1), .footer-content > .social > .social-icons:nth-child(2), .footer-content > .social > .social-icons:nth-child(3), .footer-content > .social > .social-icons:nth-child(4) {
+    padding-right: 0px;
+  }
+  .footer-content > .social > .social-icons::after {
+    display: none;
+  }
+  .footer-content > .social > .social-icons::before {
+    display: none;
   }
 }
 /*# sourceMappingURL=modem.css.map */
