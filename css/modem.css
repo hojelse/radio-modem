@@ -457,6 +457,7 @@ p:last-child {
 }
 
 .footer-content > p > a {
+  color: #777;
   cursor: pointer;
   font-weight: 700;
 }
