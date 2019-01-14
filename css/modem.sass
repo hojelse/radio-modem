@@ -285,9 +285,12 @@ p
     margin-bottom: 60px
 
 .footer-content > p > a
+  text-decoration: none
   color: $c1
   cursor: pointer
   font-weight: 700
+  &:hover
+    color: lighten($c1, 15%)
 
 .footer-content > p
   -webkit-hyphens: auto
@@ -306,7 +309,8 @@ p
   justify-content: space-between
 
 .footer-content > .social > .social-icons
-  //background-color: #fde
+  &:hover
+    opacity: 0.8
   &::after
     position: absolute
     font-size: 8pt

@@ -457,9 +457,14 @@ p:last-child {
 }
 
 .footer-content > p > a {
+  text-decoration: none;
   color: #777;
   cursor: pointer;
   font-weight: 700;
+}
+
+.footer-content > p > a:hover {
+  color: #9d9d9d;
 }
 
 .footer-content > p {
@@ -481,6 +486,10 @@ p:last-child {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer-content > .social > .social-icons:hover {
+  opacity: 0.8;
 }
 
 .footer-content > .social > .social-icons::after {
