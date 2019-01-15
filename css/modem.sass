@@ -1,10 +1,11 @@
 $c1: #777
+$bg: #f6f6f6
 
 body
   position: relative
   margin: 0
   font-family: 'Source Code Pro'
-  background-color: #f6f6f6
+  background-color: $bg
   
 .body-2
   position: absolute
@@ -199,12 +200,43 @@ h2
   padding: 20px 0px 20px 40px
   
 .episode-image
+  cursor: pointer
   background-color: $c1
   width: 75px
   height: 75px
   border-radius: 50%
   background-repeat: no-repeat
   background-size: 75px 75px
+  transition: 0.15s ease-in-out
+  display: flex
+  justify-content: center
+  align-items: center
+  &:hover
+    transform: scale(1.05)
+  &:hover .play-icon
+    transform: scale(1)
+
+.play-icon
+  width: 0
+  height: 0
+  border-top: 12px solid transparent
+  border-left: 20px dashed $bg
+  border-bottom: 12px solid transparent
+  transition: 0.15s ease-in-out
+  transform: scale(0)
+
+.playing //Mixcloud
+  animation: playing 5s linear infinite
+  border-radius: 50%
+
+.playing > .play-icon
+  transform: scale(0) !important
+    
+@keyframes playing
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
   
 .episode-content
   cursor: default

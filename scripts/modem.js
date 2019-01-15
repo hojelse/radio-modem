@@ -38,3 +38,14 @@ $(window).on('resize scroll', function() {
 });
 
 var mediaquery = window.matchMedia("(max-width: 600px)");
+
+//Mixcloud API
+var widget = Mixcloud.PlayerWidget(document.getElementById("my-widget-iframe"));
+widget.ready.then(function() {
+  widget.play();
+  widget.pause();
+  document.getElementById('togglePlay').onclick = function(){
+    widget.togglePlay();
+    $('#togglePlay').toggleClass("playing");
+  };
+});
