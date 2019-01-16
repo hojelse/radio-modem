@@ -13,3 +13,4 @@ This project is my first time using an api and I'm overall very new to webdevelo
 - Get podcast episode descriptions (can't find in api)
 - Make 'more' button work
 - Creating a new html file for each episode
+- Visual indication about how long the audio preview is
