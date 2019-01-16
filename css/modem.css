@@ -295,11 +295,6 @@ h2 {
   background-size: 100px 100px;
 }
 
-.episode:nth-child(2) .episode-image:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
 .episode:nth-child(2) .episode-content {
   padding: 40px 40px;
 }
@@ -343,12 +338,18 @@ h2 {
           align-items: center;
 }
 
+.episode-image:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .episode-image:hover .play-icon {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
 .play-icon {
+  position: absolute;
   width: 0;
   height: 0;
   border-top: 12px solid transparent;
@@ -360,20 +361,63 @@ h2 {
           transform: scale(0);
 }
 
+.play-time {
+  z-index: -1 !important;
+  opacity: 0;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  stroke-dasharray: 0px, 300px;
+  stroke-dashoffset: 0px;
+  -webkit-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  stroke: #ddd;
+}
+
+@-webkit-keyframes playtime {
+  0% {
+    stroke-dasharray: 0px, 300px;
+    -webkit-transform: scale(1.4) rotate(2070deg);
+            transform: scale(1.4) rotate(2070deg);
+  }
+  100% {
+    stroke-dasharray: 250px, 300px;
+    -webkit-transform: scale(1.4) rotate(-90deg);
+            transform: scale(1.4) rotate(-90deg);
+  }
+}
+
+@keyframes playtime {
+  0% {
+    stroke-dasharray: 0px, 300px;
+    -webkit-transform: scale(1.4) rotate(2070deg);
+            transform: scale(1.4) rotate(2070deg);
+  }
+  100% {
+    stroke-dasharray: 250px, 300px;
+    -webkit-transform: scale(1.4) rotate(-90deg);
+            transform: scale(1.4) rotate(-90deg);
+  }
+}
+
+.playing > .play-time {
+  -webkit-animation: playtime 30s linear infinite;
+          animation: playtime 30s linear infinite;
+  opacity: 1;
+}
+
 .playing {
   -webkit-animation: playing 5s linear infinite;
           animation: playing 5s linear infinite;
   border-radius: 50%;
 }
 
+.playing:hover .play-time {
+  stroke: #777;
+}
+
 .playing > .play-icon {
-  -webkit-transform: scale(1) !important;
-          transform: scale(1) !important;
-  border: none;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: #f6f6f6;
+  -webkit-transform: scale(0) !important;
+          transform: scale(0) !important;
 }
 
 @-webkit-keyframes playing {

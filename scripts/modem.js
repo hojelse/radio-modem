@@ -41,7 +41,6 @@ $(window).on('resize scroll', function() {
 
 var mediaquery = window.matchMedia("(max-width: 600px)");
 
-
 //Mixcloud API
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
@@ -87,17 +86,14 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "https://api.mixcloud.com/radiomodem/cloudcasts/", true);
 xhttp.send();
 
-
 //Mixcloud Widget
 var widget = Mixcloud.PlayerWidget(document.getElementById("my-widget-iframe"));
 widget.ready.then(function() {
-  var startPoint = 91;
   widget.play();
   widget.pause();
-  widget.seek(startPoint);
   document.getElementById('togglePlay').onclick = function(){
     widget.togglePlay();
     $('#togglePlay').toggleClass("playing");
-    widget.seek(startPoint);
+    widget.seek(91);
   };
 });

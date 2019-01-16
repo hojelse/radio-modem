@@ -177,8 +177,6 @@ h2
     width: 100px
     height: 100px
     background-size: 100px 100px
-    &:hover
-      transform: scale(1.05)
   &:nth-child(2) .episode-content
     padding: 40px 40px
   &:nth-child(2) .episode-meta
@@ -192,7 +190,7 @@ h2
   
 .episode-image-wrapper
   padding: 20px 0px 20px 40px
-  
+
 .episode-image
   cursor: pointer
   background-color: $c1
@@ -205,10 +203,13 @@ h2
   display: flex
   justify-content: center
   align-items: center
+  &:hover
+    transform: scale(1.05)
   &:hover .play-icon
     transform: scale(1)
 
 .play-icon
+  position: absolute
   width: 0
   height: 0
   border-top: 12px solid transparent
@@ -217,26 +218,42 @@ h2
   transition: 0.15s ease-in-out
   transform: scale(0)
 
+.play-time
+  z-index: -1 !important
+  opacity: 0
+  transform: scale(1.4)
+  stroke-dasharray: 0px, 300px
+  stroke-dashoffset: 0px
+  transition: 0.15s ease-in-out
+  stroke: #ddd
+
+@keyframes playtime
+  0%
+    stroke-dasharray: 0px, 300px
+    transform: scale(1.4) rotate(2070deg)
+  100%
+    stroke-dasharray: 250px, 300px
+    transform: scale(1.4) rotate(-90deg)
+
+.playing > .play-time
+  animation: playtime 30s linear infinite
+  opacity: 1
+
 .playing //Mixcloud
   animation: playing 5s linear infinite
   border-radius: 50%
+  &:hover .play-time
+    stroke: $c1
 
 .playing > .play-icon
-  //transform: scale(0) !important
-  transform: scale(1) !important
-  border: none
-  //animation: scale 0.5s ease-in-out forwards !important
-  height: 20px
-  width: 20px
-  border-radius: 50%
-  background-color: $bg
+  transform: scale(0) !important
     
 @keyframes playing
   0%
     transform: rotate(0deg)
   100%
     transform: rotate(360deg)
-  
+
 .episode-content
   cursor: default
   padding: 20px 40px
