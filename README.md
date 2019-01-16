@@ -6,8 +6,8 @@ Currently (Jan 2019) their content is split, posting podcasts on mixcloud and li
 The reason for my redesign is centralizing the content to a single website.
 This redesign project is my first time using an api and I'm overall very new to webdevelopment ✌
 
-Website url: https://radiomodem.dk
+Radio Modem website url: https://radiomodem.dk
 
-Podcast service: https://mixcloud.com/RadioModem/
+Mixcloud page: https://mixcloud.com/RadioModem/
 
 Mixcloud API: https://api.mixcloud.com
