@@ -89,6 +89,7 @@ h2
   justify-content: center
   &:nth
   &::after
+    pointer-events: none
     position: absolute
     font-size: 8pt
     margin-top: 45px
@@ -99,6 +100,7 @@ h2
     transform: translateY(5px)
     opacity: 0
   &::before
+    pointer-events: none
     position: absolute
     content: ''
     margin-top: 34px
@@ -175,6 +177,8 @@ h2
     width: 100px
     height: 100px
     background-size: 100px 100px
+    &:hover
+      transform: scale(1.05)
   &:nth-child(2) .episode-content
     padding: 40px 40px
   &:nth-child(2) .episode-meta
@@ -182,17 +186,7 @@ h2
   &:nth-child(2) .episode-title
     font-size: 20pt
     margin: 10px 0 30px 0
-  &:nth-child(2) .episode-image
-    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/e/3/1/b841-de6b-4061-bd7c-cf0dce8e02b1')
-  &:nth-child(3) .episode-image
-    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/9/e/3/1/b841-de6b-4061-bd7c-cf0dce8e02b1')
-  &:nth-child(4) .episode-image
-    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/1/c/4/9/e331-a633-4215-949a-8068e53eb8d3')
-  &:nth-child(5) .episode-image
-    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/0/9/3/5/ad0f-82f7-4194-a6ab-0b371425c7e0')
-  &:nth-child(6) .episode-image
-    background-image: url('https://thumbnailer.mixcloud.com/unsafe/600x600/extaudio/4/3/7/9/f1c0-05b5-4e50-a1ae-caf95c568910')
-
+  
 .episode-active
   box-shadow: 0 0 0 4px rgba(119, 119, 119, 0.1)
   
@@ -211,8 +205,6 @@ h2
   display: flex
   justify-content: center
   align-items: center
-  &:hover
-    transform: scale(1.05)
   &:hover .play-icon
     transform: scale(1)
 
