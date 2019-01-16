@@ -15,4 +15,4 @@ Mixcloud API: https://api.mixcloud.com
 ### known bugs and backlog
 
 - Current security issue: no escaped strings
-- Get podcast episode description (can't find in api)
+- Get podcast episode descriptions (can't find in api)
