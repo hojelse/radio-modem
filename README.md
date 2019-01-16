@@ -1,4 +1,4 @@
-# radio-modem
+radio-modem
 Unofficial redesign of ITU's Radio Modem website
 Modem is a student driven radio and podcast organisation at IT-Univerity Copenhagen.
 
@@ -12,4 +12,4 @@ Mixcloud page: https://mixcloud.com/RadioModem/
 
 Mixcloud API: https://api.mixcloud.com
 
-# Current security issue: no escaped strings
+Current security issue: no escaped strings
