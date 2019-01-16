@@ -367,8 +367,13 @@ h2 {
 }
 
 .playing > .play-icon {
-  -webkit-transform: scale(0) !important;
-          transform: scale(0) !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+  border: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
 }
 
 @-webkit-keyframes playing {
