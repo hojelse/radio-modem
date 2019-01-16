@@ -1,5 +1,5 @@
 # radio-modem
-Unofficial redesign of ITU's Radio Modem website.
+Unofficial website redesign of ITU's Radio Modem.
 
 Modem is a student driven radio and podcast organisation at IT-Univerity Copenhagen.
 
