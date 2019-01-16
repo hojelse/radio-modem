@@ -1,5 +1,6 @@
 # radio-modem
-Unofficial redesign of ITU's Radio Modem website
+Unofficial redesign of ITU's Radio Modem website.
+
 Modem is a student driven radio and podcast organisation at IT-Univerity Copenhagen.
 
 Currently (Jan 2019) their content is split, posting podcasts on [mixcloud](https://mixcloud.com/RadioModem/) and livestreaming on their [own site](https://radiomodem.dk).
