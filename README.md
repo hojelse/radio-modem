@@ -11,3 +11,5 @@ Radio Modem website url: https://radiomodem.dk
 Mixcloud page: https://mixcloud.com/RadioModem/
 
 Mixcloud API: https://api.mixcloud.com
+
+# Current security issue: no escaped strings
