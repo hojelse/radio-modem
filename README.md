@@ -11,3 +11,5 @@ This project is my first time using an api and I'm overall very new to webdevelo
 
 - Current security issue: no escaped strings
 - Get podcast episode descriptions (can't find in api)
+- Make 'more' button work
+- Creating a new html file for each episode
