@@ -59,19 +59,22 @@ xhttp.onreadystatechange = function() {
       for(var i = 0; i < episodes.length; i++) {
         //loop through and trim off everything before the double slash, example string: "The DNA podcast S3 #02 // Old Vs. New (SWU)"
         var paragraph = response.data[i].name;
-        var regex = /.\/\/./;
+        
+        var regex = / \/\/ (.*)/;
         var found = paragraph.match(regex);
-        var newEpisodeTitle = paragraph.slice(found.index + 4, paragraph.length);
+        var newEpisodeTitle = found[1];
         episodeTitles[i].innerHTML = newEpisodeTitle;
         //extract season and epsiode number from title
         //extract season
-        var regex = /.S[0-9]./;
+        var regex = / S(\d\d?) /;
         var found = paragraph.match(regex);
-        var episodeSeason = paragraph.slice(found.index + 2, found.index + 3);
+        episodeSeason = found[1];
+
         //extract episode number
-        var regex = /.#[0-9]./;
+        var regex = / #(\d\d?) /;
         var found = paragraph.match(regex);
-        var episodeNumber = paragraph.slice(found.index + 2, found.index + 4);      
+        episodeNumber = found[1];
+
         //update .episode-meta with season and episode number
         episodeMetas[i].innerHTML = "Season " + episodeSeason + " - Episode " + episodeNumber;
         //update .episode-image with image url
