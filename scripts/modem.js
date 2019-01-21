@@ -10,7 +10,7 @@ document.getElementById("live").onclick = function(){
   $(offlinetext).toggleClass("offline-text");
   $(livebeacon).toggleClass("pulse-offline");
 }
-
+/*
 $.fn.isInViewport = function() {
   var elementTop = $(this).offset().top;
   var elementBottom = elementTop + $(this).outerHeight();
@@ -40,6 +40,7 @@ $(window).on('resize scroll', function() {
 });
 
 var mediaquery = window.matchMedia("(max-width: 600px)");
+*/
 
 //Mixcloud API
 var xhttp = new XMLHttpRequest();
