@@ -91,6 +91,7 @@ xhttp.open("GET", "https://api.mixcloud.com/radiomodem/cloudcasts/", true);
 xhttp.send();
 
 //Mixcloud Widget
+/*
 var widget = Mixcloud.PlayerWidget(document.getElementById("my-widget-iframe"));
 widget.ready.then(function() {
   widget.play();
@@ -101,3 +102,7 @@ widget.ready.then(function() {
     widget.seek(91);
   };
 });
+*/
+
+//Mixcloud web scrape
+//document.querySelectorAll('div.show-description')[0].innerText
