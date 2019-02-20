@@ -14,3 +14,4 @@ This project is my first time using an api and I'm overall very new to webdevelo
 
 - Serve content from api and webscrape(episode descriptions) with serverside code in stead of frontend js
 - Design individual episode pages along with full mixcloud widget redesign
+- Design and implement livestream page
