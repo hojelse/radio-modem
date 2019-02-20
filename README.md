@@ -10,8 +10,7 @@ This project is my first time using an api and I'm overall very new to webdevelo
 
 ### known bugs and backlog
 
-- Current security issue: no escaped strings
-- Get podcast episode descriptions (can't find in api)
-- Make 'more' button work
-- Creating a new html file for each episode
-- Visual indication about how long the audio preview is
+- Security vuln: no escaped strings
+
+- Serve content from api and webscrape(episode descriptions) with serverside code in stead of frontend js
+- Design individual episode pages along with full mixcloud widget redesign
